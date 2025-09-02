@@ -8,6 +8,14 @@ require SRC . 'helper.php';
 
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "HomeController@index");
+$router->get('/home', "HomeController@homepage");
 $router->get('/lien/', "HomeController@viewLink");
+
+$router->get('/login/', "UserController@showLogin");
+$router->get('/register/', "UserController@showRegister");
+$router->get('/logout/', "UserController@logout");
+
+$router->post('/login/', "UserController@login");
+$router->post('/register/', "UserController@register");
 
 $router->run();

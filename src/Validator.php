@@ -9,8 +9,8 @@ class Validator {
     private $errors = [];
     private $messages = [
         "required" => "Le champ est requis !",
-        "min" => "Le champ doit contenir un minimum de %^% lettres !",
-        "max" => "Le champ doit contenir un maximum de %^% lettres !",
+        "min" => "Le champ doit contenir un minimum de %^% caractères !",
+        "max" => "Le champ doit contenir un maximum de %^% caractères !",
         "regex" => "Le format n'est pas respecté",
         "length" => "Le champ doit contenir %^% caractère(s) !",
         "url" => "Le champ doit correspondre à une url !",
@@ -20,7 +20,7 @@ class Validator {
         "alphaNum" => "Le champ peut contenir que des lettres minuscules, majuscules et des chiffres !",
         "alphaNumDash" => "Le champ peut contenir que des lettres minuscules, majuscules, des chiffres, des slash et des tirets !",
         "numeric" => "Le champ peut contenir que des chiffres !",
-        "confirm" => "Le champs n'est pas conforme au confirm !"
+        "confirm" => "Le mot de passe ne correspond pas !"
     ];
     private $rules = [
         "required" => "#^.+$#",
@@ -32,7 +32,7 @@ class Validator {
         "email" => FILTER_VALIDATE_EMAIL,
         "date" => "#^(\d{4})(\/|-)(0[0-9]|1[0-2])(\/|-)([0-2][0-9]|3[0-1])$#",
         "alpha" => "#^[A-z]+$#",
-        "alphaNum" => "#^[A-z0-9]+$#",
+        "alphaNum" => "#^[A-Za-z0-9\W_]+$#",
         "alphaNumDash" => "#^[A-z0-9-\|]+$#",
         "numeric" => "#^[0-9]+$#",
         "confirm" => ""

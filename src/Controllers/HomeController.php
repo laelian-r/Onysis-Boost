@@ -12,6 +12,10 @@ class HomeController {
     }
 
     public function index() {
+        require VIEWS . 'App/landing.php';
+    }
+
+    public function homepage() {
         require VIEWS . 'App/homepage.php';
     }
 

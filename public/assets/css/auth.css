@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+
+    /* background-image: url('https://www.samma3a.com/tech/en/wp-content/uploads/sites/2/2018/10/royalty-free-music.jpg'); */
+    background-image: url('https://t3.ftcdn.net/jpg/14/55/37/30/360_F_1455373093_q3lSOwhGkDLV1LO5fIpSyP9LYQVguNko.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.bg {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(44, 44, 44, 0.659);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
+}
+
+
+/* FORM */
+
+h1 {
+    font-size: 2em;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    gap: 1.5rem;
+    width: 100%;
+}
+
+.blockInput {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.labelInput {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+    transition: border-color 0.3s;
+}
+
+.labelInput input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    font-family: inherit;
+}
+
+.viewPassword {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+button[type="submit"] {
+    padding: 0.8rem 1rem;
+    font-size: 1em;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background: none;
+    color: black;
+    border: 1px solid black;
+    transition: background-color 0.3s ease;
+}
+
+.error {
+    color: red;
+    font-size: 0.9em;
+    text-align: center;
+}

@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: Arial, sans-serif;
+
+    /* background-image: url('https://www.samma3a.com/tech/en/wp-content/uploads/sites/2/2018/10/royalty-free-music.jpg'); */
+    background-image: url('https://t3.ftcdn.net/jpg/14/55/37/30/360_F_1455373093_q3lSOwhGkDLV1LO5fIpSyP9LYQVguNko.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.bg {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(44, 44, 44, 0.659);
+    backdrop-filter: blur(6px);
+    display: flex;
+    flex-direction: column;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+}
+
+h1 {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 4em;
+    color: white;
+}
+
+p {
+    font-size: 1.5em;
+    color: white;
+    text-align: center;
+    max-width: 30%;
+    /* min-width: 70%; */
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+
+ul li a {
+    text-decoration: none;
+    padding: 1rem 2rem;
+    font-size: 1.5em;
+    background: none;
+    color: white;
+    border: 2px solid white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+ul li a.signup {
+    background-color: white;
+    color: black;
+}
