@@ -30,12 +30,25 @@ if (isset($data) && is_array($data)) {
             <h2>Vos sorties</h2>
                 <?php foreach ($userReleases as $release): ?>
                     <article class="release">
-                        <?php if ($release->getCover()): ?>
-                            <img src="<?= htmlspecialchars($release->getCover()); ?>" alt="Cover de <?= htmlspecialchars($release->getTitle()); ?>" style="max-width:150px;">
-                        <?php endif; ?>
-                        <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
-                        <p>Date de sortie : <?= htmlspecialchars($release->getReleaseDate()); ?></p>
-                        <p>Type : <?= htmlspecialchars($release->getIdType()); ?></p>
+                        <div class="image">
+                            <?php if ($release->getCover()): ?>
+                                <img src="<?= htmlspecialchars($release->getCover()); ?>" alt="Cover de <?= htmlspecialchars($release->getTitle()); ?>" style="max-width:150px;">
+                            <?php endif; ?>
+                        </div>
+                        <div class="content">
+                            <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
+                            <p><?= htmlspecialchars($username); ?></p>
+                            <p>Date de sortie : <?= htmlspecialchars($release->getReleaseDate()); ?></p>
+                            <?php
+                            $typeNames = [];
+                            if (isset($types) && is_array($types)) {
+                                foreach ($types as $type) {
+                                    $typeNames[$type['id_type']] = $type['type'];
+                                }
+                            }
+                            ?>
+                            <p><?= isset($typeNames[$release->getIdType()]) ? htmlspecialchars($typeNames[$release->getIdType()]) : 'Type inconnu'; ?></p>
+                        </div>
                     </article>
                 <?php endforeach; ?>
         </section>

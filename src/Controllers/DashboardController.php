@@ -17,6 +17,7 @@ class DashboardController {
 
     public function dashboard() {
         $data = $this->manager->releases();
+        $types = $this->manager->getTypes();
         require VIEWS . 'App/dashboard.php';
     }
 
