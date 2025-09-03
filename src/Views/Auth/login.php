@@ -1,7 +1,12 @@
 <?php
 ob_start();
-$title = "Onysis Boost · Connexion";
+$title = "Onysis Boost • Connexion";
 $css = "/assets/css/auth.css";
+
+if (isset($_SESSION["user"])) {
+    header("Location: /dashboard");
+    exit();
+}
 ?>
 
 <div class="bg">

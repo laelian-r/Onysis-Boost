@@ -47,10 +47,6 @@ cd public
 php -S localhost:8000
 ```
 
-## Tests unitaires
-- Sur git bash il faut executer la commande `./vendor/bin/phpunit Tests/HomeTest.php` pour verifier nos tests
-- Sur l'invite de commandes windows il faut executer la commande `vendor\bin\phpunit ./tests` pour verifier nos tests
-
 ## Auteur
 
 * **Laélian Roux** _alias_ [@laelian-r](https://github.com/laelian-r)

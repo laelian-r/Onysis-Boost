@@ -62,7 +62,7 @@ class UserController {
                 "username" => $_POST["username"],
                 "email" => $_POST["email"],
             ];
-            header("Location: /home");
+            header("Location: /dashboard");
         } else {
             header("Location: /register");
         }
@@ -82,11 +82,11 @@ class UserController {
             $user = $this->manager->findUser($_POST["username"]);
             if ($user && $user->getEmail() === $_POST["email"] && password_verify($_POST['password'], $user->getPassword())) {
                 $_SESSION["user"] = [
-                    "id" => $user->getId(),
+                    "id_user" => $user->getId(),
                     "username" => $user->getUsername(),
                     "email" => $user->getEmail(),
                 ];
-                header("Location: /home");
+                header("Location: /dashboard");
             } else {
                 $_SESSION["error"]['message'] = "Identifiant, adresse e-mail ou mot de passe incorrect !";
                 header("Location: /login");

@@ -18,12 +18,15 @@ body {
 }
 
 .bg {
-    height: 100%;
-    width: 100%;
+    height: 100vh;
+    width: 100vw;
     background-color: rgba(44, 44, 44, 0.659);
     backdrop-filter: blur(6px);
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 2rem;
 }
 
 main {
@@ -45,8 +48,8 @@ p {
     font-size: 1.5em;
     color: white;
     text-align: center;
-    max-width: 30%;
-    /* min-width: 70%; */
+    max-width: 70%;
+    /* min-width: 30%; */
 }
 
 ul {

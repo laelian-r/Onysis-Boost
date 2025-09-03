@@ -13,9 +13,7 @@
     <?php endif; ?>
 </head>
 <body>
-    <main class="container">
-        <?= $content; ?>
-    </main>
+    <?= $content; ?>
 </body>
 </html>
 <?php

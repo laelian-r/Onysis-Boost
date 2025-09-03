@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = "Onysis Boost · Inscription";
+$title = "Onysis Boost • Inscription";
 $css = "/assets/css/auth.css";
 ?>
 

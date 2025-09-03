@@ -2,6 +2,11 @@
 ob_start();
 $title = "Onysis Boost";
 $css = "/assets/css/landing.css";
+
+if (isset($_SESSION["user"])) {
+    header("Location: /dashboard");
+    exit();
+}
 ?>
 
     <div class="bg">
