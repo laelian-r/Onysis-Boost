@@ -1,6 +1,6 @@
 <?php
 ob_start();
-$title = "Onysis Boost • Accueil";
+$title = "Onysis Boost • Dashboard";
 $css = "/assets/css/style.css";
 require VIEWS . 'components/navbar.php';
 
@@ -27,13 +27,13 @@ if (isset($data) && is_array($data)) {
 <?php if (count($userReleases) > 0): ?>
     <main>
         <section>
-            <h2>Vos releases</h2>
+            <h2>Vos sorties</h2>
                 <?php foreach ($userReleases as $release): ?>
                     <article class="release">
-                        <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
                         <?php if ($release->getCover()): ?>
                             <img src="<?= htmlspecialchars($release->getCover()); ?>" alt="Cover de <?= htmlspecialchars($release->getTitle()); ?>" style="max-width:150px;">
                         <?php endif; ?>
+                        <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
                         <p>Date de sortie : <?= htmlspecialchars($release->getReleaseDate()); ?></p>
                         <p>Type : <?= htmlspecialchars($release->getIdType()); ?></p>
                     </article>
