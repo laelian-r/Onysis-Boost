@@ -47,9 +47,4 @@ class DashboardController {
         }
         require VIEWS . 'App/newRelease.php';
     }
-
-    public function viewLink() {
-        // $data = $this->manager->all();
-        require VIEWS . 'App/link.php';
-    }
 }

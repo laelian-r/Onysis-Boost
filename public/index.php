@@ -9,6 +9,9 @@ require SRC . 'helper.php';
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "DashboardController@index");
 $router->get('/dashboard', "DashboardController@dashboard");
+
+$roter->get('/planning/:id', "DashboardController@planning");
+
 $router->get('/new', "DashboardController@newRelease");
 
 $router->post('/new', "DashboardController@newRelease");

@@ -37,8 +37,12 @@ if (isset($data) && is_array($data)) {
                         </div>
                         <div class="content">
                             <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
-                            <p><?= htmlspecialchars($username); ?></p>
-                            <p>Date de sortie : <?= htmlspecialchars($release->getReleaseDate()); ?></p>
+                            <p>
+                                <?php
+                                    $date = new DateTime($release->getReleaseDate());
+                                    echo "Date de sortie : " . htmlspecialchars($date->format('d/m/Y'));
+                                ?>
+                            </p>
                             <?php
                             $typeNames = [];
                             if (isset($types) && is_array($types)) {
@@ -48,6 +52,8 @@ if (isset($data) && is_array($data)) {
                             }
                             ?>
                             <p><?= isset($typeNames[$release->getIdType()]) ? htmlspecialchars($typeNames[$release->getIdType()]) : 'Type inconnu'; ?></p>
+                            
+                            <a href="/" class="link-planning">Planning</a>
                         </div>
                     </article>
                 <?php endforeach; ?>
