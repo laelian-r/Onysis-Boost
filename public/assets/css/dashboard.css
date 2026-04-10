@@ -1,0 +1,107 @@
+section {
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-content: center;
+	width: 100%;
+}
+
+article {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	gap: 1rem;
+	background-color: white;
+	border-radius: 10px;
+	padding: 1rem;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+article .statut .completed {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	color: #0dc100;
+}
+
+article .statut .completed::before {
+	content: "";
+	background-color: #0dc100;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 0.5rem;
+	width: 0.5rem;
+	border-radius: 50px;
+}
+
+article .statut .process {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	gap: 0.5rem;
+	color: #ffc73a;
+}
+
+article .statut .process::before {
+	content: "";
+	background-color: #ffc73a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 0.5rem;
+	width: 0.5rem;
+	border-radius: 50px;
+}
+
+article .buttons .link-planning {
+	background-color: #926bff;
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+article .buttons .delete {
+	background-color: #ff4d4d;
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+	border: none;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.new-release {
+	background-color: #926bff;
+	color: #fff;
+	padding: 4px 8px;
+	border-radius: 4px;
+	font-size: 14px;
+	padding: 0.5rem 1rem;
+	display: inline-block;
+}
+
+/* No release */
+
+.no-releases {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 4rem;
+}
+
+.no-releases h2 {
+	font-size: 2rem;
+	color: gray;
+}

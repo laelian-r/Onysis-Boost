@@ -7,7 +7,7 @@ require VIEWS . 'components/navbar.php';
 
 <main>
     <section>
-        <h2>Ajouter une nouvelle release</h2>
+        <h2>Ajouter une nouvelle sortie</h2>
         <?php if (!empty($error)): ?>
             <p style="color:red"><?= htmlspecialchars($error) ?></p>
         <?php endif; ?>
@@ -17,20 +17,28 @@ require VIEWS . 'components/navbar.php';
                 <input type="text" name="title" required>
             </div>
             <div class="blockInput">
-                <label>Cover:</label>
-                <input type="file" name="cover" required>
-            </div>
-            <div class="blockInput">
-                <label>Date de sortie :</label>
-                <input type="date" name="release_date" required>
-            </div>
-            <div class="blockInput">
                 <label>Type :</label>
                 <select name="id_type" required>
                     <?php foreach ($types as $type): ?>
                         <option value="<?= $type['id_type'] ?>"><?= htmlspecialchars($type['type']) ?></option>
                     <?php endforeach; ?>
                 </select>
+            </div>
+            <div class="blockInput">
+                <label>Nombre de morceaux:</label>
+                <input type="number" name="number_songs" min="1" required>
+            </div>
+            <div class="blockInput">
+                <label>Date de sortie :</label>
+                <input type="date" name="release_date" required>
+            </div>
+            <div class="blockInput">
+                <label>Budget:</label>
+                <input type="number" name="budget" min="0" required>
+            </div>
+            <div class="blockInput">
+                <label>Détails:</label>
+                <textarea name="details" required></textarea>
             </div>
             <button type="submit">Ajouter</button>
         </form>

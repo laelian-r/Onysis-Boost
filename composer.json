@@ -10,5 +10,7 @@
         "phpunit/php-invoker": "^4.0"
 
     },
-    "require": {}
+    "require": {
+        "vlucas/phpdotenv": "^5.6"
+    }
 }

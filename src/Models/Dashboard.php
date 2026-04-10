@@ -6,9 +6,11 @@ class Dashboard {
     public $id_release;
     public $id_user;
     public $title;
-    public $cover;
     public $id_type;
+    public $number_songs;
     public $release_date;
+    public $budget;
+    public $details;
     public $created_at;
     public $updated_at;
 
@@ -24,12 +26,20 @@ class Dashboard {
         return $this->title;
     }
 
-    public function getCover() {
-        return $this->cover;
-    }
-
     public function getIdType() {
         return $this->id_type;
+    }
+
+    public function getNumberSongs() {
+        return $this->number_songs;
+    }
+
+    public function getBudget() {
+        return $this->budget;
+    }
+
+    public function getDetails() {
+        return $this->details;
     }
 
     public function getReleaseDate() {
@@ -57,16 +67,24 @@ class Dashboard {
         $this->title = $title;
     }
     
-    public function setCover($cover) {
-        $this->cover = $cover;
-    }
-    
     public function setIdType($id_type) {
         $this->id_type = $id_type;
     }
 
+    public function setNumberSongs($number_songs) {
+        $this->number_songs = $number_songs;
+    }
+
     public function setReleaseDate($release_date) {
         $this->release_date = $release_date;
+    }
+
+    public function setBudget($budget) {
+        $this->budget = $budget;
+    }
+
+    public function setDetails($details) {
+        $this->details = $details;
     }
     
     public function setCreatedAt($created_at) {

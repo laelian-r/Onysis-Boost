@@ -1,7 +1,7 @@
 <?php
 ob_start();
 $title = "Onysis Boost • Dashboard";
-$css = "/assets/css/style.css";
+$css = "/assets/css/dashboard.css";
 require VIEWS . 'components/navbar.php';
 
 if (!isset($_SESSION['user'])) {
@@ -26,40 +26,56 @@ if (isset($data) && is_array($data)) {
 
 <?php if (count($userReleases) > 0): ?>
     <main>
+        
         <section>
-            <h2>Vos sorties</h2>
                 <?php foreach ($userReleases as $release): ?>
-                    <article class="release">
-                        <div class="image">
-                            <?php if ($release->getCover()): ?>
-                                <img src="<?= htmlspecialchars($release->getCover()); ?>" alt="Cover de <?= htmlspecialchars($release->getTitle()); ?>" style="max-width:150px;">
-                            <?php endif; ?>
-                        </div>
-                        <div class="content">
-                            <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
-                            <p>
-                                <?php
-                                    $date = new DateTime($release->getReleaseDate());
-                                    echo "Date de sortie : " . htmlspecialchars($date->format('d/m/Y'));
-                                ?>
-                            </p>
+                    <article>
+                        <h3><?= htmlspecialchars($release->getTitle()); ?></h3>
+                        
+                        <?php
+                        $typeNames = [];
+                        if (isset($types) && is_array($types)) {
+                            foreach ($types as $type) {
+                                $typeNames[$type['id_type']] = $type['type'];
+                            }
+                        }
+                        ?>
+                        <p>
                             <?php
-                            $typeNames = [];
-                            if (isset($types) && is_array($types)) {
-                                foreach ($types as $type) {
-                                    $typeNames[$type['id_type']] = $type['type'];
-                                }
+                                $date = new DateTime($release->getReleaseDate());
+                                echo htmlspecialchars($date->format('d/m/Y'));
+                            ?>
+                        </p>
+                        <p><?= isset($typeNames[$release->getIdType()]) ? htmlspecialchars($typeNames[$release->getIdType()]) : 'Type inconnu'; ?></p>
+
+                        <div class="statut">
+                            <?php
+                            // Si $release->getReleaseDate() est déjà un objet DateTime
+                            $releaseDate = is_string($release->getReleaseDate())
+                                ? new DateTime($release->getReleaseDate())
+                                : $release->getReleaseDate();
+
+                            $currentDate = new DateTime();
+
+                            if ($releaseDate < $currentDate) {
+                                echo '<p class="completed">Terminé</p>';
+                            } else {
+                                echo '<p class="process">En cours</p>';
                             }
                             ?>
-                            <p><?= isset($typeNames[$release->getIdType()]) ? htmlspecialchars($typeNames[$release->getIdType()]) : 'Type inconnu'; ?></p>
-                            
-                            <a href="/" class="link-planning">Planning</a>
+                        </div>
+                        
+                        <div class="buttons">
+                            <a href="/planning/<?= htmlspecialchars($release->getIdRelease()); ?>" class="link-planning">Planning</a>
+                             <a href="/dashboard/delete/<?= htmlspecialchars($release->getIdRelease()); ?>" class="delete">Supprimer</a>
                         </div>
                     </article>
                 <?php endforeach; ?>
         </section>
         
-        <a href="/new" class="new-release">Programmer une nouvelle sortie</a>
+        <div class="container">
+            <a href="/new" class="new-release">Programmer une nouvelle sortie</a>
+        </div>
     </main>
 <?php else: ?>
     <main class="no-releases">

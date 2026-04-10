@@ -21,6 +21,12 @@ class DashboardController {
         require VIEWS . 'App/dashboard.php';
     }
 
+    public function deleteRelease($id) {
+        $this->manager->deleteRelease($id);
+        header('Location: /dashboard');
+        exit;
+    }
+
     public function newRelease() {
         if (!isset($_SESSION['user']) || !isset($_SESSION['user']['id_user'])) {
             header('Location: /login/');
@@ -34,11 +40,14 @@ class DashboardController {
             $title = $_POST['title'] ?? '';
             $releaseDate = $_POST['release_date'] ?? '';
             $idType = $_POST['id_type'] ?? '';
-            $cover = $_POST['cover'] ?? '';
+            $numberSongs = $_POST['number_songs'] ?? null;
+            $budget = $_POST['budget'] ?? null;
+            $details = $_POST['details'] ?? null;
+
             $idUser = $_SESSION['user']['id_user'];
 
-            if ($title && $releaseDate && $idType && $cover) {
-                $this->manager->newRelease($title, $releaseDate, $idType, $cover, $idUser);
+            if ($title && $releaseDate && $idType) {
+                $this->manager->newRelease($title, $releaseDate, $idType, $numberSongs, $budget, $details, $idUser,);
                 header('Location: /dashboard');
                 exit;
             } else {

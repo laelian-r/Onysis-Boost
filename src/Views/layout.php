@@ -6,8 +6,11 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title><?= $title; ?></title>
     <script src="https://kit.fontawesome.com/c1d0ab37d6.js" crossorigin="anonymous"></script>
-    
-    <link rel="stylesheet" href="../style.css">
+
+    <?php if (isset($_SESSION['user'])): ?>
+        <link rel="stylesheet" href="/assets/css/style.css">
+    <?php endif; ?>
+
     <?php if (isset($css)): ?>
         <link rel="stylesheet" href="<?= $css ?>">
     <?php endif; ?>

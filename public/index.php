@@ -6,11 +6,16 @@ require '../src/config/config.php';
 require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
+$dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
+$dotenv->load(); // ou ->safeLoad() si tu préfères ne pas lever d'exception si absent
+
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "DashboardController@index");
 $router->get('/dashboard', "DashboardController@dashboard");
+$router->get('/dashboard/delete/:id', "DashboardController@deleteRelease");
 
-$roter->get('/planning/:id', "DashboardController@planning");
+$router->get('/planning', "PlanningController@planning");
+$router->get('/planning/:id', "PlanningController@viewPlanning");
 
 $router->get('/new', "DashboardController@newRelease");
 
