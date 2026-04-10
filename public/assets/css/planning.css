@@ -1,0 +1,25 @@
+table {
+	border-collapse: collapse;
+	border: 1px solid black;
+	border-radius: 10px;
+}
+
+thead tr {
+	background-color: #926bff;
+}
+
+thead tr th {
+	color: white;
+	font-size: 1em;
+	padding: 0.3rem 0.5rem;
+	border-right: 1px solid black;
+	/* padding: 1rem; */
+}
+
+tbody tr td {
+	background-color: rgb(237, 237, 237);
+	text-align: center;
+	border-right: 1px solid black;
+	border-top: 1px solid rgb(127, 127, 127);
+	padding: 0.3rem 0.5rem;
+}

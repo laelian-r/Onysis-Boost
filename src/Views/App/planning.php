@@ -11,8 +11,6 @@ if (!isset($_SESSION["user"])) {
 ?>
 
 <main>
-    <h1>Planning</h1>
-
     <?php if (isset($data) && $data): ?>
         <section class="release-info">
             <h2><?= htmlspecialchars($data['title'] ?? ''); ?></h2>
@@ -21,16 +19,24 @@ if (!isset($_SESSION["user"])) {
         </section>
     <?php endif; ?>
 
-    <?php if (!empty($planning)): ?>
-        <section class="ai-planning">
-            <h3>Planning généré (Markdown)</h3>
-            <div class="planning-markdown" style="white-space:pre-wrap; background:#f8f8f8; padding:1rem; border-radius:6px;">
-                <?= nl2br(htmlspecialchars($planning)); ?>
-            </div>
-        </section>
-    <?php else: ?>
-        <p>Aucun planning disponible pour cette sortie.</p>
-    <?php endif; ?>
+    <table>
+        <thead>
+			<tr>
+				<th>Jour</th>
+				<th>Action</th>
+				<th>Canal</th>
+				<th>Budget estimé</th>
+			</tr>
+		</thead>
+		<tbody id="tbody">
+            <tr>
+                <td>Lundi 10 septembre</td>
+                <td>Poster une story sur intagram</td>
+                <td>Instagram</td>
+                <td>0 €</td>
+            </tr>
+        </tbody>
+    </table>
 </main>
 
 <?php

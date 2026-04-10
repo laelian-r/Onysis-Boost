@@ -27,7 +27,7 @@ require VIEWS . 'components/navbar.php';
             </div>
             <div class="blockInput">
                 <label>Nombre de morceaux:</label>
-                <input type="number" name="number_songs" min="1" required>
+                <input type="number" name="number_songs" min="1" value="1" required>
             </div>
             <div class="blockInput">
                 <label>Date de sortie :</label>
@@ -35,7 +35,7 @@ require VIEWS . 'components/navbar.php';
             </div>
             <div class="blockInput">
                 <label>Budget:</label>
-                <input type="number" name="budget" min="0" required>
+                <input type="number" name="budget" min="0" value="0" required>
             </div>
             <div class="blockInput">
                 <label>Détails:</label>

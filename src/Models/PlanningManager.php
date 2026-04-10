@@ -26,23 +26,4 @@ class PlanningManager {
         $stmt->execute();
         return $stmt->fetch(\PDO::FETCH_ASSOC);
     }
-
-    // récupère le planning (s'il existe) pour une release
-    public function getPlanningByReleaseId($id_release) {
-        $sql = "SELECT * FROM plannings WHERE id_release = :id_release LIMIT 1";
-        $stmt = $this->bdd->prepare($sql);
-        $stmt->bindValue(':id_release', $id_release, \PDO::PARAM_INT);
-        $stmt->execute();
-        return $stmt->fetch(\PDO::FETCH_ASSOC);
-    }
-
-    // insère un planning généré
-    public function insertPlanning($id_release, $content) {
-        $sql = "INSERT INTO plannings (id_release, content, created_at) VALUES (:id_release, :content, NOW())";
-        $stmt = $this->bdd->prepare($sql);
-        $stmt->bindValue(':id_release', $id_release, \PDO::PARAM_INT);
-        $stmt->bindValue(':content', $content, \PDO::PARAM_STR);
-        $stmt->execute();
-        return $this->bdd->lastInsertId();
-    }
 }
