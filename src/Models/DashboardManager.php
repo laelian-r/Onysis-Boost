@@ -41,6 +41,11 @@ class DashboardManager {
         $stmt->bindValue(':id_user', $idUser, \PDO::PARAM_INT);
         $stmt->bindValue(':budget', $budget, \PDO::PARAM_STR);
         $stmt->bindValue(':details', $details, \PDO::PARAM_STR);
-        return $stmt->execute();
+        
+        if ($stmt->execute()) {
+            return $this->bdd->lastInsertId();
+        }
+
+        return false;
     }
 }

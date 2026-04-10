@@ -47,9 +47,12 @@ class DashboardController {
             $idUser = $_SESSION['user']['id_user'];
 
             if ($title && $releaseDate && $idType) {
-                $this->manager->newRelease($title, $releaseDate, $idType, $numberSongs, $budget, $details, $idUser,);
-                header('Location: /dashboard');
-                exit;
+                $newId = $this->manager->newRelease($title, $releaseDate, $idType, $numberSongs, $budget, $details, $idUser);
+                if ($newId) {
+                    header('Location: /planning/' . $newId);
+                    exit;
+                }
+                $error = "Impossible de créer la sortie.";
             } else {
                 $error = "Tous les champs sont obligatoires.";
             }
