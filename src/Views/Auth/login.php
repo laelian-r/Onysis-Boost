@@ -17,7 +17,7 @@ if (isset($_SESSION["user"])) {
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="username"><i class="fas fa-user-tie"></i></label>
+          <label for="username"><i class="fas fa-user-tie icon"></i></label>
           <input type="text" name="username" value="<?php echo old("username");?>" placeholder="Username">
         </div>
         <span class="error"><?php echo error("username");?></span>
@@ -25,7 +25,7 @@ if (isset($_SESSION["user"])) {
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="email"><i class="fas fa-envelope"></i></label>
+          <label for="email"><i class="fas fa-envelope icon"></i></label>
           <input type="email" name="email" value="<?php echo old("email");?>" placeholder="Email">
         </div>
         <span class="error"><?php echo error("email");?></span>
@@ -33,7 +33,7 @@ if (isset($_SESSION["user"])) {
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="password"><i class="fas fa-key"></i></label>
+          <label for="password"><i class="fas fa-key icon"></i></label>
           <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="Password">
           <button id="btnPassword" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>

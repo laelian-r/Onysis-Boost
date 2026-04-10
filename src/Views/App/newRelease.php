@@ -7,11 +7,12 @@ require VIEWS . 'components/navbar.php';
 
 <main>
     <section>
-        <h2>Ajouter une nouvelle sortie</h2>
-        <?php if (!empty($error)): ?>
-            <p style="color:red"><?= htmlspecialchars($error) ?></p>
-        <?php endif; ?>
         <form method="post">
+            <h2>Ajouter une nouvelle sortie</h2>
+            <?php if (!empty($error)): ?>
+                <p style="color:red"><?= htmlspecialchars($error) ?></p>
+            <?php endif; ?>
+            
             <div class="blockInput">
                 <label>Titre :</label>
                 <input type="text" name="title" required>

@@ -11,7 +11,7 @@ $css = "/assets/css/auth.css";
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="username"><i class="fas fa-user-tie"></i></label>
+          <label for="username"><i class="fas fa-user-tie icon"></i></label>
           <input type="text" name="username" value="<?php echo old("username");?>" placeholder="username">
         </div>
         <span class="error"><?php echo error("username");?></span>
@@ -19,7 +19,7 @@ $css = "/assets/css/auth.css";
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="email"><i class="fas fa-envelope"></i></label>
+          <label for="email"><i class="fas fa-envelope icon"></i></label>
           <input type="email" name="email" value="<?php echo old("email");?>" placeholder="email">
         </div>
         <span class="error"><?php echo error("email");?></span>
@@ -27,7 +27,7 @@ $css = "/assets/css/auth.css";
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="password"><i class="fas fa-key"></i></label>
+          <label for="password"><i class="fas fa-key icon"></i></label>
           <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="password">
           <button id="btnPassword" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>
@@ -36,7 +36,7 @@ $css = "/assets/css/auth.css";
 
       <div class="blockInput">
         <div class="labelInput">
-          <label for="passwordConfirm"><i class="fas fa-key"></i></label>
+          <label for="passwordConfirm"><i class="fas fa-key icon"></i></label>
           <input id="inputPasswordConfirm" class="inputPassword" type="password" name="passwordConfirm" value="<?php echo old("passwordConfirm");?>" placeholder="Confirm password">
           <button id="btnPasswordConfirm" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>
