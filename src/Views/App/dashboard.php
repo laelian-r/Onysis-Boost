@@ -87,4 +87,3 @@ if (isset($data) && is_array($data)) {
 <?php
 $content = ob_get_clean();
 require VIEWS . 'layout.php';
-require VIEWS . 'components/footer.php';

@@ -1,0 +1,159 @@
+Tu es un expert en marketing musical.
+
+Génère un planning promotionnel détaillé pour un projet musical.
+
+Données du projet :
+- Artiste : ${artiste || "Non renseigné"}
+- Nom du projet : "${nomProjet}"
+- Type de projet : ${typeProjet || "Non renseigné"}
+- Nombre de morceaux : ${nbMorceaux || "Non renseigné"}
+- Style musical : ${style || "Non renseigné"}
+- Date de sortie : ${dateSortie}
+- Budget maximum : ${budget ? budget + " €" : "Non renseigné"}
+- Détails : "${details || "Aucun"}"
+
+---
+
+Inspire-toi de cette structure éprouvée pour construire le planning.
+Adapte-la à la durée disponible (1 mois avant la sortie + 1-2 semaines après) :
+
+AVANT LA SORTIE :
+- Shooting photo / création graphique (bannières "Date de sortie" + "Disponible maintenant", pochette)
+- Pitch Spotify For Artists + liste curateurs & blogs à contacter (GSHEET)
+- Création de 2 teasers vidéo + vidéo de sortie
+- Mise à jour des profils réseaux sociaux (bio, photo, highlights) + lien Pre-Save
+- Publication décompte (J-X avant la sortie)
+- Publication de l'artwork
+- Stories Instagram/Facebook quotidiennes (5 par jour dès J-3)
+- Publication du 1er teaser (J-3)
+- Publication du 2e teaser (J-2)
+- Veille de sortie : dernier teaser, buzz, alarmes préparées (J-1)
+
+JOUR DE LA SORTIE :
+- Vérifier la disponibilité sur les plateformes
+- Changer les bannières en "Disponible maintenant"
+- Publier la vidéo de sortie
+- Relancer les blogs/curateurs
+- Contacts one-to-one (MP, textos, emails)
+- Créer un Fan Link
+- Lancer les publicités Facebook/Instagram si budget disponible
+- Live "Launch Party" Instagram ou Facebook
+- Expliquer aux fans comment écouter sur Spotify (écouter en entier, liker, créer une playlist)
+
+APRÈS LA SORTIE :
+- J+1 : Mettre à jour "Artist Pick" Spotify, remercier la communauté, stories
+- J+2 : Vidéo de prestation scénique (live, répétition, rue), optimiser les ads
+- J+3 : Vidéo "Behind the Scenes" (processus de création), optimiser les ads
+- J+4 : Live Instagram ou Facebook (concert, session de prod, mix), optimiser les ads
+- J+5 : Publier le clip musical sur YouTube (ou lyrics video si pas de clip), optimiser les ads
+- J+6 : Remerciements individuels aux personnes qui ont aidé, publication de feedbacks/réactions de fans
+
+N'hésite pas à t'inspirer sur ce qui se fait en ce moment sur internet et à utiliser les bonnes pratiques pour bien manier les réseaux (référencement, heure de publication...)
+
+---
+
+Contraintes :
+1. La promotion commence 1 mois avant la sortie (ou dès demain si moins d'un mois).
+2. Elle se poursuit 1 à 2 semaines après la sortie.
+3. Planning chronologique, jour par jour (sauf indication contraire dans les détails).
+4. Actions concrètes et réalistes adaptées au style. Selon le budget, inclure partenariats, événements, ads.
+5. Idées créatives adaptées à l'image artistique.
+6. Respecter le budget.
+
+RÉPONDS UNIQUEMENT avec un tableau JSON valide, sans markdown ni texte autour.
+Exemple de format de chaque objet :
+{
+  "jour": "Lundi 10 avril 2025",
+  "date": "2025-04-10",
+  "actions": ["Action 1", "Action 2", "Action 3"],
+  "canal": "Instagram, YouTube...",
+  "budget_estime": "0 €"
+}
+Priorité : haute | moyenne | basse.
+Une entrée par jour d'action (uniquement les jours où il y a quelque chose à faire). Regroupe toutes les actions du même jour dans le tableau "actions".
+
+Objectif :
+Fournir un guide que l'artiste peut suivre étape par étape pour maximiser l'impact de la sortie.
+
+-----------------------------------------------------------------------------------------------------------------
+
+PROMPT 2
+
+-----------------------------------------------------------------------------------------------------------------
+
+Tu es un expert en marketing musical.
+            Génère un planning promotionnel détaillé pour un projet musical.
+
+            Données du projet :
+            Nom de l'artiste : {$data['username']}
+            Nom du projet : {$data['title']}
+            Type de projet : {$data['id_type']}
+            Nombre de morceaux : {$data['number_songs']}
+            Date de sortie : {$data['release_date']}
+            Budget maximum : {$data['budget']}
+            Détails : {$data['details']}
+            Date de remplissage du formulaire : {$data['created_at']}
+
+            ---
+
+            Inspire-toi de cette structure éprouvée pour construire le planning.
+            Adapte-la à la durée disponible (1 à 2 emaines pour préparé tout ce qu'il faut pour la promotion + 1 mois avant la sortie pour promouvoir le projet + 1-2 semaines après) :
+
+            AVANT LA SORTIE :
+            - Shooting photo / création graphique (bannières \"Date de sortie\" + \"Disponible maintenant\", pochette)
+            - Pitch Spotify For Artists + liste curateurs & blogs à contacter (GSHEET)
+            - Création de 2 teasers vidéo + vidéo de sortie
+            - Mise à jour des profils réseaux sociaux (bio, photo, highlights) + lien Pre-Save
+            - Publication décompte (J-X avant la sortie)
+            - Publication de l'artwork
+            - Stories Instagram/Facebook quotidiennes (5 par jour dès J-3)
+            - Publication du 1er teaser (J-3)
+            - Publication du 2e teaser (J-2)
+            - Veille de sortie : dernier teaser, buzz, alarmes préparées (J-1)
+
+            JOUR DE LA SORTIE :
+            - Vérifier la disponibilité sur les plateformes
+            - Changer les bannières en \"Disponible maintenant\"
+            - Publier la vidéo de sortie
+            - Relancer les blogs/curateurs
+            - Contacts one-to-one (MP, textos, emails)
+            - Créer un Fan Link
+            - Lancer les publicités Facebook/Instagram si budget disponible
+            - Live \"Launch Party\" Instagram ou Facebook
+            - Expliquer aux fans comment écouter sur Spotify (écouter en entier, liker, créer une playlist)
+
+            APRÈS LA SORTIE :
+            - J+1 : Mettre à jour \"Artist Pick\" Spotify, remercier la communauté, stories
+            - J+2 : Vidéo de prestation scénique (live, répétition, rue), optimiser les ads
+            - J+3 : Vidéo \"Behind the Scenes\" (processus de création), optimiser les ads
+            - J+4 : Live Instagram ou Facebook (concert, session de prod, mix), optimiser les ads
+            - J+5 : Publier le clip musical sur YouTube (ou lyrics video si pas de clip), optimiser les ads
+            - J+6 : Remerciements individuels aux personnes qui ont aidé, publication de feedbacks/réactions de fans
+
+            N'hésite pas à t'inspirer sur ce qui marche en ce moment sur internet et à utiliser les bonnes pratiques pour bien manier les réseaux (référencement, heure de publication...).
+            Utilise les méthodes données par les plateformes (Spotify For Artists, Facebook Business, etc.) pour maximiser la portée et l'engagement toujours en respectant le budget de l'artiste.
+
+            ---
+
+            Contraintes :
+            1. La promotion commence 1 mois avant la sortie (ou dès le lendemain du remplissage du formulaire si moins d'un mois). Garde 1 à deux semaine pour tout préparer et lancer la promotion, puis continue à promouvoir jusqu'à 1-2 semaines après la sortie.
+            2. Planning chronologique, jour par jour (sauf indication contraire dans les détails).
+            3. Actions concrètes et réalistes adaptées au style. Selon le budget, inclure partenariats, événements, ads.
+            4. Idées créatives adaptées à l'image artistique.
+            5. Respecter le budget.
+            6. Le budget doit dépendre de l'action. Le budget doit être le total de toutes les actions de la journée. Par exemple, si le jour 1 il y a une action de publication d'un teaser sur Instagram (budget 0€) et une action de lancement d'une pub Facebook (budget 50€), le budget total du jour 1 sera de 50€. Si dans les détails il est écrit que l'artiste a un budget de 0€, alors toutes les actions doivent être organiques (pas de pub payante) et le budget total de chaque jour doit être de 0€.
+            7. Si les détails précisent des éléments à inclure dans le planning (ex: \"contacter tel blog\", \"poster sur Instagram\", \"lancer une pub Facebook\"), assure-toi de les inclure dans le planning au bon moment. Par exemple, si les détails précisent de contacter un blog, inclue une action de contact du blog dans le planning (ex: \"Contacter le blog X pour coverage\").
+            8. Si les détails précisent une date de concert, inclue une action de promotion du concert dans le planning (ex: \"Publier une vidéo de répétition pour le concert du 20 avril\").
+            9. N'ajoute pas une action telle que \"Créer un planning promotionnel\".
+            10. Dans les action, lance le décompte de la sortie en story maximum une semaine avant la sortie.
+
+            RÉPONDS UNIQUEMENT avec un tableau JSON valide, sans markdown ni texte autour.
+            Exemple de format de chaque objet :
+            {
+            \"jour\": \"10 avril 2025\"
+            \"actions\": [\"Action 1\", \"Action 2\", \"Action 3\"],
+            \"outils\": [\"Instagram/Facebook\", \"Photoshop/Alternative\", \"Logiciel de musique\"],
+            \"budget_estime\": \"0 €\"
+            }
+            Une entrée par jour d'action (uniquement les jours où il y a quelque chose à faire). Regroupe toutes les actions et les outils du même jour dans le tableau \"actions\" et \"outils\".
+            Pour les outils, met les dans l'ordre de l'action (ex: si la catégorie action est de publier un teaser sur Instagram, puis de contacter des blogs, puis de lancer une pub Facebook, le tableau outils sera [\"Instagram/Facebook\", \"Blogs\"]). Enlève les plateformes de Google comme drive, mail, etc.

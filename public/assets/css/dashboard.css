@@ -88,6 +88,14 @@ article .buttons .delete {
 	font-size: 14px;
 	padding: 0.5rem 1rem;
 	display: inline-block;
+	transition: background-color 0.3s ease;
+}
+
+.new-release:hover {
+	color: #7a54d9;
+	background: none;
+	border: 1px solid #926bff;
+	transition: background-color 0.3s ease;
 }
 
 /* No release */

@@ -1,14 +1,14 @@
 <?php
 namespace App\Controllers;
 
-use App\Models\DashboardManager;
+use App\Models\ReleaseManager;
 use App\Validator;
 
 class DashboardController {
     private $manager;
 
     public function __construct() {
-        $this->manager = new DashboardManager();
+        $this->manager = new ReleaseManager();
     }
 
     public function index() {

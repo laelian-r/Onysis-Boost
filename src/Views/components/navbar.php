@@ -20,11 +20,6 @@ $username = $_SESSION['user']['username'] ?? header('Location: /login/');
 <header>
     <nav>
         <a href="/dashboard"><h1>Ønysis Boost</h1></a>
-        <!-- <ul>
-            <li>
-                <a href="/dashboard" class="hidden">Dashboard</a>
-            </li>
-        </ul> -->
         <div class="dropdown-container">
             <div class="container">
                 <p><?= htmlspecialchars($username); ?></p>

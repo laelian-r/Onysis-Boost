@@ -1,8 +1,8 @@
 <?php
 namespace App\Models;
 
-/** Class Dashboard **/
-class Dashboard {
+/** Class Release **/
+class Release {
     public $id_release;
     public $id_user;
     public $title;
@@ -60,7 +60,7 @@ class Dashboard {
     }
 
     public function setIdUser($id_user) {
-        return $this->id_user;
+        $this->id_user = $id_user;
     }
     
     public function setTitle($title) {

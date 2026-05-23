@@ -12,7 +12,7 @@ $css = "/assets/css/auth.css";
       <div class="blockInput">
         <div class="labelInput">
           <label for="username"><i class="fas fa-user-tie icon"></i></label>
-          <input type="text" name="username" value="<?php echo old("username");?>" placeholder="username">
+          <input type="text" name="username" value="<?php echo old("username");?>" placeholder="Nom d'utilisateur">
         </div>
         <span class="error"><?php echo error("username");?></span>
       </div>
@@ -20,7 +20,7 @@ $css = "/assets/css/auth.css";
       <div class="blockInput">
         <div class="labelInput">
           <label for="email"><i class="fas fa-envelope icon"></i></label>
-          <input type="email" name="email" value="<?php echo old("email");?>" placeholder="email">
+          <input type="email" name="email" value="<?php echo old("email");?>" placeholder="Email">
         </div>
         <span class="error"><?php echo error("email");?></span>
       </div>
@@ -28,7 +28,7 @@ $css = "/assets/css/auth.css";
       <div class="blockInput">
         <div class="labelInput">
           <label for="password"><i class="fas fa-key icon"></i></label>
-          <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="password">
+          <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="Mot de passe">
           <button id="btnPassword" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>
         <span class="error"><?php echo error("password");?></span>
@@ -37,7 +37,7 @@ $css = "/assets/css/auth.css";
       <div class="blockInput">
         <div class="labelInput">
           <label for="passwordConfirm"><i class="fas fa-key icon"></i></label>
-          <input id="inputPasswordConfirm" class="inputPassword" type="password" name="passwordConfirm" value="<?php echo old("passwordConfirm");?>" placeholder="Confirm password">
+          <input id="inputPasswordConfirm" class="inputPassword" type="password" name="passwordConfirm" value="<?php echo old("passwordConfirm");?>" placeholder="Confirmer le mot de passe">
           <button id="btnPasswordConfirm" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>
         <span class="error"><?php echo error("passwordConfirm");?></span>

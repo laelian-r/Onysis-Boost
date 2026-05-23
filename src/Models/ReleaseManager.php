@@ -1,9 +1,9 @@
 <?php
 namespace App\Models;
 
-use App\Models\Dashboard;
-/** Class DashboardManager **/
-class DashboardManager {
+use App\Models\Release;
+/** Class ReleaseManager **/
+class ReleaseManager {
 
     private $bdd;
     
@@ -18,7 +18,7 @@ class DashboardManager {
 
     public function releases() {
         $stmt = $this->bdd->query('SELECT * FROM releases ORDER BY id_release DESC');
-        return $stmt->fetchAll(\PDO::FETCH_CLASS, "App\Models\Dashboard");
+        return $stmt->fetchAll(\PDO::FETCH_CLASS, "App\Models\Release");
     }
 
     public function deleteRelease($id) {

@@ -18,7 +18,7 @@ if (isset($_SESSION["user"])) {
       <div class="blockInput">
         <div class="labelInput">
           <label for="username"><i class="fas fa-user-tie icon"></i></label>
-          <input type="text" name="username" value="<?php echo old("username");?>" placeholder="Username">
+          <input type="text" name="username" value="<?php echo old("username");?>" placeholder="Nom d'utilisateur">
         </div>
         <span class="error"><?php echo error("username");?></span>
       </div>
@@ -34,7 +34,7 @@ if (isset($_SESSION["user"])) {
       <div class="blockInput">
         <div class="labelInput">
           <label for="password"><i class="fas fa-key icon"></i></label>
-          <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="Password">
+          <input id="inputPassword" class="inputPassword" type="password" name="password" value="<?php echo old("password");?>" placeholder="Mot de passe">
           <button id="btnPassword" class="viewPassword" type="button" name="button"><i class="far fa-eye"></i></button>
         </div>
         <span class="error"><?php echo error("password");?></span>

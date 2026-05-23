@@ -58,7 +58,7 @@ class UserController {
             $this->manager->store($password);
 
             $_SESSION["user"] = [
-                "id" => $this->manager->getBdd()->lastInsertId(),
+                "id_user" => $this->manager->getBdd()->lastInsertId(), // "id" → "id_user"
                 "username" => $_POST["username"],
                 "email" => $_POST["email"],
             ];
