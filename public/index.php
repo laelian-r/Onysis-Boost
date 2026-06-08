@@ -7,7 +7,7 @@ require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->load(); // ou ->safeLoad() si tu préfères ne pas lever d'exception si absent
+$dotenv->safeLoad(); // uses safeLoad() to avoid throwing if .env is missing
 
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "DashboardController@index");
