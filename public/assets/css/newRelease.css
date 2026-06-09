@@ -12,7 +12,7 @@ section {
 	padding: 2rem;
 	max-width: 600px;
 	margin: 0 auto;
-	background-color: white;
+	background-color: var(--color-bg-card);
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 	border-radius: 10px;
 }
@@ -44,7 +44,7 @@ textarea {
 	border-radius: 10px;
 	font-size: 1em;
 	transition: border-color 0.3s;
-	background-color: #f2f2f2;
+	background-color: var(--color-bg-default);
 }
 
 textarea {
@@ -55,8 +55,8 @@ textarea {
 button[type="submit"] {
 	padding: 0.5rem 1rem;
 	font-size: 1em;
-	background-color: #926bff;
-	color: white;
+	background-color: var(--color-btn-primary);
+	color: var(--color-bg-white);
 	border: none;
 	border-radius: 10px;
 	cursor: pointer;
@@ -65,8 +65,8 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background: none;
-	color: #926bff;
-	border: 1px solid #926bff;
+	color: var(--color-btn-primary);
+	border: 1px solid var(--color-btn-primary);
 	transition: background-color 0.3s ease;
 }
 

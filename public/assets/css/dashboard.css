@@ -11,7 +11,7 @@ article {
 	flex-direction: column;
 	align-items: flex-start;
 	gap: 1rem;
-	background-color: white;
+	background-color: var(--color-bg-card);
 	border-radius: 10px;
 	padding: 1rem;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -23,12 +23,12 @@ article .statut .completed {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	color: #0dc100;
+	color: var(--color-status-completed);
 }
 
 article .statut .completed::before {
 	content: "";
-	background-color: #0dc100;
+	background-color: var(--color-status-completed);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -43,12 +43,12 @@ article .statut .process {
 	align-items: center;
 	justify-content: center;
 	gap: 0.5rem;
-	color: #ffc73a;
+	color: var(--color-status-in-progress);
 }
 
 article .statut .process::before {
 	content: "";
-	background-color: #ffc73a;
+	background-color: var(--color-status-in-progress);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -58,8 +58,8 @@ article .statut .process::before {
 }
 
 article .buttons .link-planning {
-	background-color: #926bff;
-	color: #fff;
+	background-color: var(--color-btn-primary);
+	color: var(--color-bg-white);
 	padding: 4px 8px;
 	border-radius: 4px;
 	font-size: 14px;
@@ -68,8 +68,8 @@ article .buttons .link-planning {
 }
 
 article .buttons .delete {
-	background-color: #ff4d4d;
-	color: #fff;
+	background-color: var(--color-status-deleted);
+	color: var(--color-bg-white);
 	padding: 4px 8px;
 	border-radius: 4px;
 	font-size: 14px;
@@ -81,8 +81,8 @@ article .buttons .delete {
 }
 
 .new-release {
-	background-color: #926bff;
-	color: #fff;
+	background-color: var(--color-btn-primary);
+	color: var(--color-bg-white);
 	padding: 4px 8px;
 	border-radius: 4px;
 	font-size: 14px;
@@ -92,9 +92,9 @@ article .buttons .delete {
 }
 
 .new-release:hover {
-	color: #7a54d9;
+	color: var(--color-btn-primary-hover);
 	background: none;
-	border: 1px solid #926bff;
+	border: 1px solid var(--color-btn-primary);
 	transition: background-color 0.3s ease;
 }
 
@@ -111,5 +111,5 @@ article .buttons .delete {
 
 .no-releases h2 {
 	font-size: 2rem;
-	color: gray;
+	color: var(--color-text-default);
 }

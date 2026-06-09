@@ -15,12 +15,12 @@ main {
 }
 
 h1 {
-	color: #3f3f3f;
+	color: var(--color-text-heading);
 }
 
 a {
-	background-color: #926bff;
-	color: #fff;
+	background-color: var(--color-btn-primary);
+	color: var(--color-bg-white);
 	padding: 4px 8px;
 	border-radius: 4px;
 	font-size: 14px;

@@ -1,0 +1,48 @@
+:root {
+	/* Action/Button Colors */
+	--color-btn-primary: #926bff;
+	--color-btn-primary-hover: #7a54d9;
+	--color-btn-primary-bg-light: #ede8ff;
+
+	/* Status Colors */
+	--color-status-completed: #0dc100;
+	--color-status-in-progress: #ffc73a;
+	--color-status-error: #ff4d4d;
+	--color-status-deleted: #ff4d4d;
+
+	/* Neutral/Base Colors */
+	--color-text-dark: #1a1a1a;
+	--color-text-default: #585858;
+	--color-text-muted: #555;
+	--color-text-heading: #3f3f3f;
+
+	/* Background/Surface Colors */
+	--color-bg-white: #ffffff;
+	--color-bg-card: #ffffff;
+	--color-bg-default: #f2f2f2;
+	--color-bg-surface-light: #f8f9fc;
+	--color-bg-row-alternate: rgb(237, 237, 237);
+	--color-bg-dropdown: rgb(231, 231, 231);
+	--color-bg-dropdown-open: rgb(229, 229, 229);
+	--color-bg-overlay-dark: rgba(44, 44, 44, 0.659);
+	--color-bg-page-section: #eef2ff;
+
+	/* Info/Alert Colors */
+	--color-info-bg: #fff7df;
+	--color-info-text: #f0a44d;
+
+	/* Border Colors */
+	--color-border-primary: #d6d1f5;
+	--color-border-light: #c7c2f0;
+	--color-border-dashed: #c9c9c9;
+	--color-border-subtle: #c7c2f0;
+
+	/* Table/Special Colors */
+	--color-table-header: #3730a3;
+	--color-table-badge-bg: #f1f0ff;
+	--color-table-badge-text: #5e3db3;
+	--color-table-input-bg: #e8f0ff;
+
+	/* Semantic Utilities */
+	--color-black: #000000;
+}

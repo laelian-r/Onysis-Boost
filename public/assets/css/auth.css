@@ -22,7 +22,7 @@ body {
 .bg {
 	height: 100vh;
 	width: 100vw;
-	background-color: rgba(44, 44, 44, 0.659);
+	background-color: var(--color-bg-overlay-dark);
 	backdrop-filter: blur(6px);
 	display: flex;
 	flex-direction: column;
@@ -44,7 +44,7 @@ section {
 	align-items: center;
 	gap: 2rem;
 	padding: 2rem;
-	background-color: white;
+	background-color: var(--color-bg-card);
 	border-radius: 15px;
 	box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
@@ -97,8 +97,8 @@ form {
 button[type="submit"] {
 	padding: 0.8rem 1rem;
 	font-size: 1em;
-	background-color: #926bff;
-	color: white;
+	background-color: var(--color-btn-primary);
+	color: var(--color-bg-white);
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
@@ -107,13 +107,13 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
 	background: none;
-	color: #926bff;
-	border: 1px solid #926bff;
+	color: var(--color-btn-primary);
+	border: 1px solid var(--color-btn-primary);
 	transition: background-color 0.3s ease;
 }
 
 .error {
-	color: red;
+	color: var(--color-status-error);
 	font-size: 0.9em;
 	text-align: center;
 }
