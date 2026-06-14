@@ -17,9 +17,9 @@ class PlanningManager {
 
     public function getReleaseById($id_release) {
         $sql = "SELECT r.*, u.username
-                FROM releases r
-                JOIN users u ON r.id_user = u.id
-                WHERE r.id_release = :id_release";
+            FROM releases r
+            JOIN users u ON r.id_user = u.id_user
+            WHERE r.id_release = :id_release";
         $stmt = $this->bdd->prepare($sql);
         $stmt->bindValue(':id_release', $id_release, \PDO::PARAM_INT);
         $stmt->execute();

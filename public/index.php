@@ -7,7 +7,7 @@ require '../vendor/autoload.php';
 require SRC . 'helper.php';
 
 $dotenv = Dotenv\Dotenv::createImmutable(dirname(__DIR__));
-$dotenv->safeLoad(); // uses safeLoad() to avoid throwing if .env is missing
+$dotenv->safeLoad();
 
 $router = new App\Router($_SERVER["REQUEST_URI"]);
 $router->get('/', "DashboardController@index");
@@ -27,5 +27,7 @@ $router->get('/logout/', "UserController@logout");
 
 $router->post('/login/', "UserController@login");
 $router->post('/register/', "UserController@register");
+
+$router->get('/profil/:id', "UserController@showProfile");
 
 $router->run();

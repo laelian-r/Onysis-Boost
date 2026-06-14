@@ -274,7 +274,7 @@ class PlanningController
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, 10);
         
         // Chemin vers le certificat CA pour éviter les erreurs SSL (ajuste le chemin selon ton environnement)
-        // curl_setopt($ch, CURLOPT_CAINFO, "C:/wamp64/bin/php/php8.4.6/extras/ssl/cacert.pem");
+        curl_setopt($ch, CURLOPT_CAINFO, "C:/wamp64/bin/php/php-8.5.6/extras/ssl/cacert.pem");
         
         // En-têtes avec la clé API
         curl_setopt($ch, CURLOPT_HTTPHEADER, [

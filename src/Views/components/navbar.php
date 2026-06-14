@@ -3,6 +3,7 @@ ob_start();
 
 if (!isset($_SESSION['user'])) {
     header('Location: /login/');
+    exit();
 }
 
 $username = $_SESSION['user']['username'] ?? header('Location: /login/');
@@ -19,14 +20,14 @@ $username = $_SESSION['user']['username'] ?? header('Location: /login/');
 
 <header>
     <nav>
-        <a href="/dashboard"><h1>Ønysis Boost</h1></a>
+        <h1>Ønysis Boost</h1>
         <div class="dropdown-container">
             <div class="container">
                 <p><?= htmlspecialchars($username); ?></p>
                 <i class="fa-solid fa-caret-down"></i>
             </div>
             <div class="content">
-                <a href="#"><i class="fa-solid fa-user"></i>Profil</a>
+                <a href="/profil/<?= htmlspecialchars($_SESSION['user']['id_user'] ?? ''); ?>"><i class="fa-solid fa-user"></i>Profil</a>
                 <a href="#"><i class="fa-solid fa-gear"></i>Paramètres</a>
                 <a href="/logout"><i class="fa-solid fa-power-off"></i>Déconnexion</a>
             </div>

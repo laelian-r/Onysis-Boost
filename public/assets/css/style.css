@@ -45,7 +45,7 @@ li {
 
 a {
 	text-decoration: none;
-	color: var(--color-black);
+	/* color: var(--color-black); */
 	display: flex;
 	align-items: center;
 	gap: 1rem;
@@ -98,6 +98,10 @@ a {
 	padding: 1rem;
 	border-radius: 0 0 10px 10px;
 	width: 100%;
+}
+
+.content a {
+	color: var(--color-text-dark);
 }
 
 .dropdown-container:hover .content {

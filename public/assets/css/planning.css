@@ -19,6 +19,10 @@
 	gap: 1rem;
 }
 
+.title i {
+	color: var(--color-text-dark);
+}
+
 .info {
 	background-color: var(--color-info-bg);
 	color: var(--color-info-text);

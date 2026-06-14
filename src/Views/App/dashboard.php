@@ -6,7 +6,7 @@ require VIEWS . 'components/navbar.php';
 
 if (!isset($_SESSION['user'])) {
     header('Location: /login/');
-    exit;
+    exit();
 }
 
 $username = $_SESSION['user']['username'] ?? '';
@@ -67,7 +67,7 @@ if (isset($data) && is_array($data)) {
                         
                         <div class="buttons">
                             <a href="/planning/<?= htmlspecialchars($release->getIdRelease()); ?>" class="link-planning">Planning</a>
-                             <a href="/dashboard/delete/<?= htmlspecialchars($release->getIdRelease()); ?>" class="delete">Supprimer</a>
+                            <a href="/dashboard/delete/<?= htmlspecialchars($release->getIdRelease()); ?>" class="delete">Supprimer</a>
                         </div>
                     </article>
                 <?php endforeach; ?>

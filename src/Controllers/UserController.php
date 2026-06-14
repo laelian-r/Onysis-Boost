@@ -15,6 +15,23 @@ class UserController {
         $this->validator = new Validator();
     }
 
+    public function showProfile($id) {
+        if (!isset($_SESSION['user'])) {
+            header('Location: /login/');
+            exit;
+        }
+
+        $currentUserId = $_SESSION['user']['id_user'];
+        $requestedId = $id;
+
+        if ($requestedId !== $currentUserId) {
+            header('Location: /profil/' . $currentUserId);
+            exit;
+        }
+
+        require VIEWS . 'App/profil.php';
+    }
+
     public function showLogin() {
         require VIEWS . 'Auth/login.php';
     }

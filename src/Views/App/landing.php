@@ -11,6 +11,7 @@ if (isset($_SESSION["user"])) {
 
     <div class="bg">
         <main>
+            <img src="/assets/images/logo.svg" alt="Onysis Boost">
             <h1>Ønysis Boost</h1>
             <p>Plannifiez la promotion de votre dérnière sortie gratuitement de façon simple et automatisé</p>
             

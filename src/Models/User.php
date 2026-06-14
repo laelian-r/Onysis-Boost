@@ -3,14 +3,13 @@ namespace App\Models;
 
 /** Class User **/
 class User {
-
-    private $id;
+    private $id_user;
     private $username;
     private $email;
     private $password;
 
     public function getId() {
-        return $this->id;
+        return $this->id_user;
     }
 
     public function getUsername() {
@@ -26,8 +25,8 @@ class User {
     }
 
     
-    public function setId() {
-        $this->id = uniqid();
+    public function setId($id_user) {
+        $this->id_user = $id_user;
     }
 
     public function setUsername(String $username) {

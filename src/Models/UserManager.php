@@ -39,12 +39,6 @@ class UserManager {
         return $stmt->fetch();
     }
 
-    public function all() {
-        $stmt = $this->bdd->query('SELECT * FROM Users');
-
-        return $stmt->fetchAll(\PDO::FETCH_CLASS,"App\Models\User");
-    }
-
     public function store($password) {
         $stmt = $this->bdd->prepare("INSERT INTO users(username, email, password) VALUES (?, ?, ?)");
         $stmt->execute(array(
@@ -52,17 +46,5 @@ class UserManager {
             isset($_POST["email"]) ? $_POST["email"] : "",
             $password,
         ));
-    }
-
-    public function getAllUsers() {
-        $stmt = $this->bdd->prepare("SELECT * FROM users ORDER BY id ASC");
-        $stmt->execute();
-        return $stmt->fetchAll();
-    }
-
-    public function findById($id) {
-        $stmt = $this->bdd->prepare("SELECT * FROM users WHERE id = ?");
-        $stmt->execute([$id]);
-        return $stmt->fetch();
     }
 }

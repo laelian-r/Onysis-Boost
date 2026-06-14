@@ -4,8 +4,12 @@ $title = "Onysis Boost • Connexion";
 $css = "/assets/css/auth.css";
 
 if (isset($_SESSION["user"])) {
-    header("Location: /dashboard");
-    exit();
+    if (empty($_SESSION["user"]["id_user"])) {
+        unset($_SESSION["user"]);
+    } else {
+        header("Location: /dashboard");
+        exit();
+    }
 }
 ?>
 
